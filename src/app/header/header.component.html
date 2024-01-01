@@ -29,21 +29,23 @@
         #buttonsNav="mdbCollapse"
       >
         <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item ms-3">
-              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+        <ul class="navbar-nav nav-style me-auto mb-2 mb-lg-0 ms-xs-3 ms-sm-3 ms-md-3">
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link text-light" href="#">Главная</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Лучшие места</a>
+              <!--<a class="nav-link text-light" routerLink='/best-places' routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact:true}">Лучшие места</a>-->
+              <a class="nav-link text-light" href="#">Лучшие места</a>
             </li>
         </ul>    
         <!-- Left links -->
   
         <div class="d-flex align-items-center">
-          <button type="button" class="btn btn-link px-3 me-2">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-signin btn-rounded text-white me-2">
             Войти
           </button>
-          <button type="button" class="btn btn-primary me-3">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-signup btn-rounded text-white me-3">
             Зарегистрироваться
           </button>
         </div>
