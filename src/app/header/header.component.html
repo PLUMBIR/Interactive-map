@@ -20,7 +20,7 @@
       >
         <i class="fas fa-bars"></i>
       </button>
-  
+
       <!-- Collapsible wrapper -->
       <div
         class="collapse navbar-collapse"
@@ -38,11 +38,11 @@
               [routerLinkActiveOptions]="{exact:true}">Лучшие места</a>-->
               <a class="nav-link text-light" href="#">Лучшие места</a>
             </li>
-        </ul>    
+        </ul>
         <!-- Left links -->
-  
+
         <div class="d-flex align-items-center">
-          <button type="button" mdbRipple rippleColor="white" class="btn btn-signin btn-rounded text-white me-2">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-signin btn-rounded text-white me-2" (click)="openModal()">
             Войти
           </button>
           <button type="button" mdbRipple rippleColor="white" class="btn btn-signup btn-rounded text-white me-3">
