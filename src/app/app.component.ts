@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderModule } from './header/header.module';
 import {MdbCheckboxModule} from "mdb-angular-ui-kit/checkbox";
 import {FooterComponent} from "./footer/footer.component";
 import {MdbModalModule} from "mdb-angular-ui-kit/modal";
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ import {MdbModalModule} from "mdb-angular-ui-kit/modal";
   imports: [
     CommonModule,
     MdbCheckboxModule,
-    HeaderModule,
+    HeaderComponent,
     FooterComponent,
     MdbModalModule
   ],
