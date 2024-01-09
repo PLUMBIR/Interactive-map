@@ -7,7 +7,6 @@
         src="assets/nav-logo.png"
         alt=""
         loading="lazy"
-        class=""
         />
 
       <!-- Toggle button -->
@@ -42,10 +41,10 @@
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-          <button type="button" mdbRipple rippleColor="white" class="btn btn-signin btn-rounded text-white me-2" (click)="openModal()">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-outline-purple me-2" (click)="openSignInModal()">
             Войти
           </button>
-          <button type="button" mdbRipple rippleColor="white" class="btn btn-signup btn-rounded text-white me-3">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-signup me-3" (click)="openSignUpModal()">
             Зарегистрироваться
           </button>
         </div>

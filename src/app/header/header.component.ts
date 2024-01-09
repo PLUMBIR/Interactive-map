@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { SignUpComponent } from '../body/sign-up/sign-up.component';
 
 @Component({
     selector: 'app-header',
@@ -22,12 +23,26 @@ import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
 
 export class HeaderComponent{
 
-  modalRef: MdbModalRef<SignInComponent> | null = null;
+  signInModalRef: MdbModalRef<SignInComponent> | null = null;
+
+  signUpModalRef: MdbModalRef<SignUpComponent> | null = null;
 
   constructor(private modalService: MdbModalService) {
   }
 
-  openModal() {
-    this.modalRef = this.modalService.open(SignInComponent)
+  openSignInModal() {
+    this.signInModalRef = this.modalService.open(SignInComponent, {
+      modalClass: 'modal-dialog-centered'
+    })
+  }
+
+  // openModal() {
+  //   this.modalRef = this.modalService.open(SignInComponent)
+  // }
+
+  openSignUpModal(){
+    this.signUpModalRef = this.modalService.open(SignUpComponent, {
+      modalClass: 'modal-dialog-centered'
+    })
   }
 }

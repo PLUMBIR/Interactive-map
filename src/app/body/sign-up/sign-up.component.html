@@ -1,0 +1,53 @@
+<div class="modal-content bg-signin rounded p-4">
+    <div class="modal-header border-0">
+      <h5 class="modal-title modal-text-color" id="exampleModalLabel">Регистрация</h5>
+      <button
+        type="button"
+        class="btn-close btn-close-white"
+        aria-label="Close"
+        (click)="modalRef.close()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form class="d-flex flex-column">
+        <label mdblabel for="userNameInput" class="form-label modal-text-color">Введите имя</label>
+        <input
+          type="text"
+          id="UserNameInput"
+          class="form-control rounded input-style mb-4"
+          placeholder="Имя"
+          aria-label="Username"
+        />
+        <label mdblabel for="emailInput" class="form-label modal-text-color">Введите e-mail</label>
+        <input
+          type="email"
+          id="EmailInput"
+          class="form-control rounded input-style mb-4"
+          placeholder="Email"
+          aria-label="Email"
+        />
+        <label mdblabel for="passwordInput" class="form-label modal-text-color">Введите пароль</label>
+        <input
+          type="password"
+          id="PasswordInput"
+          class="form-control rounded input-style mb-4"
+          placeholder="Пароль"
+          aria-label="Password"
+        />
+        <label mdblabel for="userNameInput" class="form-label modal-text-color">Подтвердите пароль</label>
+        <input
+          type="password"
+          id="ConfirmedPasswordInput"
+          class="form-control rounded input-style"
+          placeholder="Подтвердите пароль"
+          aria-label="ConfirmedPassword"
+        />
+      </form>
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" mdbRipple rippleColor="white" class="btn btn-signin modal-text-color w-100">
+        Зарегистрироваться
+      </button>
+    </div>
+  </div>
+  

@@ -1,4 +1,4 @@
-<div class="bg-signin rounded">
+<div class="modal-content bg-signin rounded p-4">
   <div class="modal-header border-0">
     <h5 class="modal-title modal-text-color" id="exampleModalLabel">Войти</h5>
     <button
@@ -9,30 +9,34 @@
     ></button>
   </div>
   <div class="modal-body">
-      <form class="d-flex flex-column">
-        <label for="emailInput" class="form-label modal-text-color">Введите e-mail</label>
-        <input
-          type="email"
-          id="emailInput"
-          class="form-control rounded input-style"
-          placeholder="Email"
-          aria-label="Email"
-          aria-describedby="email-addon"
-        />
-        <label for="passwordInput" class="form-label modal-text-color">Введите пароль</label>
-        <input
-          type="password"
-          id="passwordInput"
-          class="form-control rounded input-style"
-          placeholder="Password"
-          aria-label="Password"
-          aria-describedby="password-addon"
-        />
-      </form>
+    <form class="d-flex flex-column">
+      <label mdblabel for="emailInput" class="form-label modal-text-color">Введите e-mail</label>
+      <input
+        type="email"
+        id="emailInput"
+        class="form-control rounded input-style mb-4"
+        placeholder="Email"
+        aria-label="Email"
+        aria-describedby="email-addon"
+      />
+      <label mdblabel for="passwordInput" class="form-label modal-text-color">Введите пароль</label>
+      <input
+        type="password"
+        id="passwordInput"
+        class="form-control rounded input-style"
+        placeholder="Password"
+        aria-label="Password"
+        aria-describedby="password-addon"
+      />
+    </form>
   </div>
   <div class="modal-footer border-0">
-    <button type="button" class="btn btn-signin modal-text-color w-100" (click)="modalRef.close()">
+    <button type="button" mdbRipple rippleColor="white" class="btn btn-signin modal-text-color w-100">
       Войти
     </button>
+    <div class="container text-center">
+      <a href="#" class="modal-text-color-notremember me-2">Забыли пароль?</a>
+      <a href="#" class="modal-text-color-signup">Зарегистрироваться</a>
+    </div>
   </div>
 </div>
