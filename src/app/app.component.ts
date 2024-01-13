@@ -4,6 +4,7 @@ import {MdbCheckboxModule} from "mdb-angular-ui-kit/checkbox";
 import {FooterComponent} from "./footer/footer.component";
 import {MdbModalModule} from "mdb-angular-ui-kit/modal";
 import { HeaderComponent } from './header/header.component';
+import { BodyComponent } from './body/body.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
     CommonModule,
     MdbCheckboxModule,
     HeaderComponent,
+    BodyComponent,
     FooterComponent,
     MdbModalModule
   ],

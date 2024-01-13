@@ -2,24 +2,13 @@
     background: #282633;
 }
 
-.input-style{
-    background: #403d4d;
+.form-outline .form-control ~ .form-label{
     color: #747180;
-    border: 0;
 }
 
-.modal-text-color{
-    color: #fff;
-}
-
-.btn-signin{
-    background: #47ae66;
-}
-
-.modal-text-color-notremember{
-    color: rgba(255, 255, 255, 0.3);
-}
-
-.modal-text-color-signup{
-    color: #b7a7ff;
+.rounded-left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
 }

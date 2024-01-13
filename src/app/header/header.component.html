@@ -41,13 +41,19 @@
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-          <button type="button" mdbRipple rippleColor="white" class="btn btn-outline-purple me-2" (click)="openSignInModal()">
+          <button type="button" mdbRipple rippleColor="white" class="btn btn-signup me-3" (click)="openSignInModal()">
             Войти
           </button>
-          <button type="button" mdbRipple rippleColor="white" class="btn btn-signup me-3" (click)="openSignUpModal()">
-            Зарегистрироваться
-          </button>
         </div>
+        <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+          <img
+            src="assets/icon-unauthorized-person.jpg"
+            class="rounded-circle"
+            height="30"
+            alt="avatar"
+            loading="lazy"
+          />
+        </a>
       </div>
       <!-- Collapsible wrapper -->
     </div>
