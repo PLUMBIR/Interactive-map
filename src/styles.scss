@@ -1,3 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "mdb-angular-ui-kit/assets/scss/mdb.scss";
+
+.nav-pills {
+  .nav-link {
+    background-color: #f7f7f7;
+    color: rgba(0, 0, 0, 0.55);
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    background-color: #e3ebf7;
+    color: #285192;
+  }
+}

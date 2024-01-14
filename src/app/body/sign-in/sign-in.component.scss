@@ -7,8 +7,18 @@
 }
 
 .rounded-left {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.nav-pills {
+  .nav-link {
+    background-color: aqua !important;
+    color: aqua !important;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    background-color: aqua !important;
+    color: aqua !important;
+  }
 }
