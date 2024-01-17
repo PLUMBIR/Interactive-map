@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MdbModalRef } from "mdb-angular-ui-kit/modal";
 import {MdbFormsModule} from 'mdb-angular-ui-kit/forms';
-import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTabsComponent, MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { AbstractControl, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,7 +12,9 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
   imports: [
     CommonModule,
     MdbFormsModule,
-    MdbTabsModule
+    MdbTabsModule,
+    MdbValidationModule, 
+    ReactiveFormsModule
   ],
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.scss']
@@ -18,6 +22,51 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 
 export class SignInComponent {
 
-  constructor(public modalRef: MdbModalRef<SignInComponent>) {
+  @ViewChild('tabs') tabs!: MdbTabsComponent;
+
+  signInForm = new FormGroup({
+    email: new FormControl(null, { validators: [Validators.required, Validators.email], updateOn: 'change' }),
+    password: new FormControl(null, { validators: Validators.required, updateOn: 'change' }),
+  });
+
+  signUpForm = new FormGroup({
+    name: new FormControl(null, { validators: Validators.required, updateOn: 'change' }),
+    email: new FormControl(null, { validators: [Validators.required, Validators.email], updateOn: 'change' }),
+    password: new FormControl(null, { validators: [Validators.required, Validators.minLength(8)], updateOn: 'change' }),
+    confirmPassword: new FormControl(null, { validators: [Validators.required], updateOn: 'change' })
+  });
+
+  constructor(public modalRef: MdbModalRef<SignInComponent>) {  
+  }
+
+  get LogInEmail(): AbstractControl {
+    return this.signInForm.get('email')!;
+  }
+
+  get LogInPassword(): AbstractControl {
+    return this.signInForm.get('password')!;
+  }
+
+  get SignUpName(): AbstractControl {
+    return this.signUpForm.get('name')!;
+  }
+
+  get SignUpEmail(): AbstractControl {
+    return this.signUpForm.get('email')!;
+  }
+
+  get SignUpPassword(): AbstractControl {
+    return this.signUpForm.get('password')!;
+  }
+
+  get SignUpRepeatPassword(): AbstractControl {
+    return this.signUpForm.get('confirmPassword')!;
+  }
+
+  setActiveTab() {
+    this.tabs.setActiveTab(1);
   }
 }
+
+
+

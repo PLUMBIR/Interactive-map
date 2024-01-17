@@ -1,0 +1,18 @@
+.card:hover
+{ 
+  transform: scale(1.05);
+  position:initial;
+  z-index: 1;
+  background:#fff;
+}
+
+.input-style{
+  margin-bottom: 20px;
+  background: #403d4d;
+  border: 0;
+  color: #fff;
+}
+
+::placeholder {
+  color: #747180;
+}
