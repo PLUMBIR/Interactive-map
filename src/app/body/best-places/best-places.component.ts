@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ICard } from './card.interface';
 import { FormsModule } from '@angular/forms';
 import { FilterPlacesPipe } from 'src/app/pipes/filter-places.pipe';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-best-places',
@@ -10,7 +11,8 @@ import { FilterPlacesPipe } from 'src/app/pipes/filter-places.pipe';
   imports: [
     CommonModule,
     FormsModule,
-    FilterPlacesPipe
+    FilterPlacesPipe,
+    RouterModule
   ],
   templateUrl: './best-places.component.html',
   styleUrls: ['./best-places.component.scss']

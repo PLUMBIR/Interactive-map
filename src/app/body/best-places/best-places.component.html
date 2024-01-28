@@ -10,7 +10,7 @@
         />
     </div>
     <div class="row">
-        <div *ngFor="let card of cards | filterPlaces: term;" 
+        <div *ngFor="let card of cards | filterPlaces: term;"
             class="col-md-4 mb-3"
         >
             <div class="card">
@@ -18,7 +18,8 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ card.title }}</h5>
                     <p class="card-text">{{card.description}}</p>
-                    <a href="#!" class="btn btn-primary">Button</a>
+                    <a href="#!" class="btn btn-primary" routerLink='/best-places-information' routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact:true}">Больше информации</a>
                 </div>
             </div>
         </div>
