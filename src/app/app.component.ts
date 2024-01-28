@@ -15,7 +15,7 @@ import { BodyComponent } from './body/body.component';
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-    MdbModalModule
+    MdbModalModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
