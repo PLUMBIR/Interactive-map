@@ -3,22 +3,26 @@
     width: 250px;
     position: fixed;
     z-index: 1;
-    top: 0;
+    top: 60px;
     left: 0;
     background-color: #1c1a24;
     padding-top: 20px;
   }
-  
+
 .sidenav a {
     padding: 8px 8px 8px 32px;
     font-size: 18px;
     color: #555261;
     display: block;
   }
-  
+
 .sidenav a:hover {
     color: #fff;
     cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .sidenav {
+    top: 52px;
   }
-  
-  
+}

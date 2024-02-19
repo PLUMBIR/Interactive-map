@@ -1,1 +1,10 @@
+.body-template {
+  background: #312f3d;
+  margin-top: 60px;
+}
 
+@media (max-width: 992px) {
+  .body-template {
+    margin-top: 52px;
+  }
+}
