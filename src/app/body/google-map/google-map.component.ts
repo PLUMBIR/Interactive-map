@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {GoogleMapsModule} from "@angular/google-maps";
+import { SideNavComponent } from '../side-nav/side-nav.component';
 
 @Component({
   selector: 'app-google-map',
   standalone: true,
   imports: [
     CommonModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    SideNavComponent,
   ],
   templateUrl: './google-map.component.html',
   styleUrls: ['./google-map.component.scss']
